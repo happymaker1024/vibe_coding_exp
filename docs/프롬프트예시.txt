@@ -1,0 +1,53 @@
+논문 문제정의, 목표 설정(가설 설정), 실험 설계 
+
+1. 실험 설계
+
+2. 환경 설정
+---------------------------------
+uv lock --upgrade-package numba --upgrade-package llvmlite
+uv sync
+# .python-version 고정
+uv python pin 3.12
+
+# 가상환경 재생성
+rm -rf .venv
+uv sync
+
+# 라이브러리 설치
+uv add pandas numpy scikit-learn xgboost lightgbm shap matplotlib seaborn jupyter "numba>=0.61"
+----------------------------------
+
+# 1.
+README.md
+이 파일에 윈도우11 기준으로 uv 가상환경 설치 및 가상환경 만들고, 활성하, 라이브러리 설치하는 방법을 정리해줘
+
+
+# 2. 
+docs\설명가능한정기예금가입여부예측을위한앙상블학습기반분류모델들의비교분석.pdf
+위 논문의 실험을 재현하기 위해, 아래의 파일에 실험을 설계했어. 검토해줘
+docs\실험 설계.md
+데이터 수집
+https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset?resource=download
+
+# 3.
+실험 메인 폴더
+paper_exp01\
+
+실험 데이터 폴더인데 확인해줘
+paper_exp01\bank_marketing_data
+
+# 4. 
+docs\실험 설계.md
+실험 설계한 내용을 다시 검토해줘
+
+# 5.
+피드백 내용으로 다음 파일을 업데이트 해줘
+docs\실험 설계.md
+
+# 6.
+paper_exp01/ 폴더는 실험 베이스 폴더야. 
+이 폴더에 논문 작성에 필요한 결과물을 얻을 수 있도록 실험을 진행해줘.
+
+# 7.
+해당 파일의 컬럼 y가 deposit 라고 보변됨
+paper_exp01\kaggle_data\bank\bank.csv
